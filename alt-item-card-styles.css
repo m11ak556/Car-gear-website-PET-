@@ -1,0 +1,15 @@
+.card-title {
+    padding-bottom: 24px;
+}
+.item-card-img {
+    width: 300px;
+    height: 300px;
+}
+
+.item-details-list {
+    list-style-type: none;
+}
+
+.item-details-list li p {
+    margin:0;
+}

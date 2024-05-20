@@ -1,0 +1,170 @@
+:root {
+    --color-accent: #513e32;
+    --color-light-accent: rgb(165, 42, 42);
+    --color-shadow: rgba(81, 62, 50, 0.7);
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/futura/futurabookc.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Futura";
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    min-height: 100%;
+}
+
+footer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 25rem;
+    background-color: var(--color-accent);
+    border-radius: 2.5rem 2.5rem 0 0;
+    box-shadow: 0rem 0.5rem 1.25rem black;
+    padding: 0 2.5rem 0.75rem 2.5rem;
+}
+
+footer > hr {
+    margin-top: 2.5rem;
+    height: 0.125rem;
+    border-width: 0;
+    border-radius: 2.5rem;
+    background-color: white;
+    opacity: 0.377;
+}
+
+footer h6 {
+    color: white;
+    font-size: 1.67rem;
+    margin-bottom: 2.75rem;
+    opacity: 0.76;
+}
+
+footer a.text-reset {
+    transition: opacity 50ms ease-out 50ms;
+    text-decoration: none;
+}
+
+footer a.text-reset:hover {
+    opacity: 0.491;
+}
+
+footer p {
+    opacity: 0.377;
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer .row {
+    margin-top: -1.25rem;
+    margin-bottom: 5rem;
+}
+
+.nav-link {
+    color: var(--color-accent);
+    font-size: 1.67rem;
+    text-decoration: underline;
+    transition: opacity 50ms ease-out 50ms;
+}
+
+.nav-link:hover {
+    opacity: 70%;
+}
+
+.navbar-nav {
+    gap: 3.65vw;
+}
+
+.card {
+    border-style: none;
+    box-shadow: 0px 2px 7px var(--color-shadow);
+    min-height: 350px;
+    max-height: 350px;
+}
+
+.card:hover .favourite-item-mark {
+    opacity: 100;
+}
+
+.card-body {
+    flex: 0 0 auto;
+}
+
+.card-img-top {
+    flex: 1 0 auto;
+    width: 11.625rem;
+    height: 11.625rem;
+    object-fit: contain;
+    align-self: center;
+}
+
+.btn-primary {
+    min-width: 6.875rem;
+    border-style: none;
+    background-color: var(--color-accent);
+    transition: 100ms transform ease-out 75ms;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-light-accent);
+}
+
+.btn-primary:active {
+    background-color: var(--color-light-accent) !important;
+    transform: scale(0.94);
+}
+
+.favourite-item-mark {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.favourite-item-mark-fill {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transform: scale(0);
+    transition: 120ms transform ease-out 50ms;
+}
+
+.favourite-item-mark:hover ~ .favourite-item-mark-fill {
+    transform: scale(1);
+}
+
+.favourite-item-mark-fill:hover {
+    transform: scale(1);
+}
+
+.copyright {
+    color: white;
+    flex-grow: 0;
+    font-size: 1.33rem;
+    text-align: center;
+    opacity: 0.377;
+}

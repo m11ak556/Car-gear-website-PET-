@@ -1,0 +1,293 @@
+:root {
+    --color-accent: #513e32;
+    --color-light-accent: #ffffff;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/futura/futurabookc.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Futura";
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex: 0 0 auto;
+    padding-left: 7.25rem;
+    padding-top: 7.25rem;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 25rem;
+    background-color: var(--color-accent);
+    border-radius: 2.5rem 2.5rem 0 0;
+    box-shadow: 0rem 0.5rem 1.25rem black;
+    padding: 0 2.5rem 0.75rem 2.5rem;
+}
+
+footer > hr {
+    margin-top: 2.5rem;
+    height: 0.125rem;
+    border-width: 0;
+    border-radius: 2.5rem;
+    background-color: white;
+    opacity: 0.377;
+}
+
+footer .card {
+    border-width: 0;
+    background-color: transparent;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 8.5rem;
+    color: var(--color-accent);
+    flex-shrink: 1;
+}
+
+p {
+    font-size: 3.67rem;
+    color: var(--color-accent);
+    flex-shrink: 1;
+}
+
+.car-container {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.full-height {
+    height: 100%;
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.car-animated {
+    position: absolute;
+    animation: drive-to-top 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    right: 0rem;
+    bottom: 3.125rem;
+    width: 37.5rem;
+    flex-shrink: 1;
+}
+
+.text-block {
+    position: relative;
+    margin-left: 5.21vw;
+    margin-bottom: 10.6rem;
+    align-self: center;
+}
+
+.fading-text {
+    opacity: 0;
+    animation: fade-in-text 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 3.65vw;
+    animation: fade-in-text 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.navbar li a {
+    color: var(--color-accent);
+    font-size: 1.67rem;
+    text-decoration: underline;
+    transition: opacity 50ms ease-out 50ms;
+}
+
+.navbar li a:hover {
+    opacity: 70%;
+}
+
+.sitemap {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 0.625rem;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    justify-content: space-evenly;
+}
+
+.sitemap-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sitemap-box-header ~ p {
+    opacity: 0.377;
+    color: var(--color-light-accent);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sitemap-box-header {
+    color: var(--color-light-accent);
+    font-size: 1.67rem;
+    margin-bottom: 2.75rem;
+    opacity: 0.76;
+}
+
+.sitemap-box ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+.sitemap-box li a {
+    font-size: 18pt;
+    opacity: 0.377;
+    transition: opacity 50ms ease-out 50ms;
+    text-decoration: none;
+    color: var(--color-light-accent);
+}
+
+.sitemap-box li a:hover {
+    opacity: 0.491;
+}
+
+.copyright {
+    color: var(--color-light-accent);
+    flex-grow: 0;
+    font-size: 1.33rem;
+    text-align: center;
+    opacity: 0.377;
+    margin-bottom: 1.8rem;
+}
+
+@keyframes drive-to-top {
+    0% {
+        transform: translateY(120%);
+        opacity: 100;
+    }
+    90% {
+        transform: translateY(52%);
+        opacity: 100;
+    }
+    100% {
+        transform: translateY(56%);
+        opacity: 100;
+    }
+}
+
+@keyframes fade-in-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media (max-width: 1800px) {
+    .car-animated {
+        bottom: -1.8rem;
+    }
+}
+
+@media (max-width: 1295px) {
+    .car-animated {
+        bottom: -1.875rem;
+    }
+
+    h1 {
+        font-size: 5.83rem;
+    }
+
+    p {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .car-animated {
+        bottom: -7.1rem;
+    }
+
+    .sitemap {
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .sitemap-box  {
+        align-items: center;   
+    }
+
+    .sitemap-box li, .sitemap-box-header {
+        text-align: center;   
+    }
+}
+
+@media (max-width: 600px) {
+    .car-animated {
+        bottom: 4.375rem;
+        width: 25rem;
+    }
+
+    h1 {
+        font-size: 4.167rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    header {
+        padding-left: 0;
+    }
+
+    nav {
+        margin: auto;
+    }
+}
+
+@media (max-height: 885px) {
+    .car-animated {
+        bottom: -1rem;
+        width: 20rem;
+    }
+}
