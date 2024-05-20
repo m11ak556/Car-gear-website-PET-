@@ -1,3 +1,3 @@
 # Car-gear-website-PET-
 
-This project had to be opend with the Internet connection as the bootstrap is loaded via CDN. ✨
+This project has to be opened with the Internet connection on as the bootstrap is loaded via CDN. ✨
